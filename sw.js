@@ -1,6 +1,6 @@
 /* Early Learnings offline support for newer devices (older iPads use play.appcache instead).
    Network first, so a new upload shows up straight away; the saved copy is used when offline. */
-var CACHE = 'early-learnings-v10';
+var CACHE = 'early-learnings-v11';
 var FILES = ['play.html', 'play-icon.png', 'icon-192.png', 'icon-512.png', 'manifest.webmanifest', 'guide.html', 'sheets.html', 'privacy.html', 'terms.html', 'docs.css'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(FILES); }).then(function () { return self.skipWaiting(); }));

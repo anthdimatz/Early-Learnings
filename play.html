@@ -575,8 +575,8 @@ input{-webkit-user-select:text;user-select:text}
 
 /* ===== Early Learnings identity ===== */
 #home,#welcome,#cat{background-color:#FBF3E7;background-image:radial-gradient(ellipse 55% 24% at 16% 100%,#DDE8C4 99%,rgba(221,232,196,0) 100%),radial-gradient(ellipse 62% 19% at 84% 100%,#E7EED3 99%,rgba(231,238,211,0) 100%);background-size:100% 100%;background-repeat:no-repeat}
-.brand{position:absolute;top:16px;left:22px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;z-index:3}
-.brand .rb{display:block;width:100px;height:58px;margin-right:12px}
+.brand{position:absolute;top:10px;left:22px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;z-index:3}
+.brand .rb{display:block;width:78px;height:78px;margin-right:14px;border-radius:39px;background:#FBE5B4;border:3px solid #fff;box-shadow:0 2px 6px rgba(43,58,103,.14);overflow:hidden}
 .brand .rb svg,.wrb svg{width:100%;height:100%;display:block}
 .brand .bt{display:block;text-align:left}
 .bn{display:block;font-size:42px;font-weight:800;color:#2B3A67;line-height:1;letter-spacing:-.5px}
@@ -585,17 +585,23 @@ input{-webkit-user-select:text;user-select:text}
 .setbtn.pressed{background:#F3EDDF}
 #home .hscroll{padding:0 18px 14px}
 .hwrap{position:relative}
-.peek{position:absolute;left:60%;top:0;width:20%;height:232px;z-index:1;pointer-events:none}
-.cats{position:relative;z-index:2;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:center;justify-content:center;padding-top:118px}
-.cat{position:relative;width:calc(20% - 14px);min-width:168px;height:372px;margin:7px;border-radius:30px;border:3px solid rgba(255,255,255,.75);box-shadow:0 6px 0 rgba(43,58,103,.09);text-align:center;color:#2B3A67;padding:10px 8px 0;vertical-align:top;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;-webkit-justify-content:flex-start;justify-content:flex-start}
+.rbar{position:relative;z-index:2;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:calc(100% - 14px);height:112px;margin:30px 7px 0;padding:0 26px 0 176px;border-radius:30px;background:#FBD3BC;border:3px solid rgba(255,255,255,.75);box-shadow:0 6px 0 rgba(43,58,103,.09);text-align:left;color:#2B3A67;overflow:visible}
+.rbar.pressed{-webkit-transform:translateY(3px);transform:translateY(3px);box-shadow:0 3px 0 rgba(43,58,103,.09)}
+.rart{position:absolute;left:22px;bottom:0;width:140px;height:146px;pointer-events:none}
+.rtx{display:block;-webkit-flex:1;flex:1}.rtx b{display:block;font-size:31px;font-weight:800;line-height:1.1}.rtx small{display:block;font-size:18px;font-weight:600;opacity:.9;margin-top:5px}
+.rgo{display:block;width:54px;height:54px;border-radius:27px;background:#fff;font-size:25px;line-height:54px;text-align:center;-webkit-flex-shrink:0;flex-shrink:0;box-shadow:0 2px 6px rgba(43,58,103,.12)}
+.gnames{margin:-4px 0 10px;padding-bottom:12px;border-bottom:1px solid #E9E4D8}.gnames span{display:block;font-size:15px;color:#666;margin-bottom:6px}.gnames input{font:inherit;font-size:19px;font-weight:700;width:calc(25% - 10px);min-width:120px;margin:0 8px 6px 0;padding:9px 12px;border-radius:14px;border:3px solid #ddd;color:#2B3A67;-webkit-appearance:none}
+#turnBadge.named{width:auto;min-width:58px;padding:0 18px;font-size:24px}
+.cats{position:relative;z-index:2;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:center;justify-content:center;padding-top:6px}
+.cat{position:relative;width:calc(20% - 14px);min-width:168px;height:322px;margin:7px;border-radius:30px;border:3px solid rgba(255,255,255,.75);box-shadow:0 6px 0 rgba(43,58,103,.09);text-align:center;color:#2B3A67;padding:10px 8px 0;vertical-align:top;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;-webkit-justify-content:flex-start;justify-content:flex-start}
 .cat.pressed{-webkit-transform:translateY(4px);transform:translateY(4px);box-shadow:0 2px 0 rgba(43,58,103,.09)}
 .cat .cil{display:block;width:138px;height:114px;margin:4px auto 6px;-webkit-flex-shrink:0;flex-shrink:0}
 .cat .cil svg,.cti svg{width:100%;height:100%;display:block}
 .cat b{display:block;font-size:33px;font-weight:800;line-height:1.1}
 .cat .cd{display:block;font-size:17px;font-weight:600;line-height:1.25;margin-top:8px;padding:0 6px;opacity:.9}
-.cat .cgo{position:absolute;left:50%;bottom:22px;margin-left:-25px;width:50px;height:50px;border-radius:25px;background:#fff;font-size:24px;line-height:50px;color:#2B3A67;box-shadow:0 2px 6px rgba(43,58,103,.12)}
+.cat .cgo{position:absolute;left:50%;bottom:16px;margin-left:-25px;width:50px;height:50px;border-radius:25px;background:#fff;font-size:24px;line-height:50px;color:#2B3A67;box-shadow:0 2px 6px rgba(43,58,103,.12)}
 .c-discover{background:#D2E4FA}.c-think{background:#DDEBC6}.c-create{background:#DED4F4}.c-explore{background:#FBE5B4}.c-relax{background:#CBECDF}
-.ebar{position:relative;z-index:2;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:calc(100% - 14px);margin:20px 7px 0;padding:12px 24px;min-height:76px;border-radius:38px;background:rgba(255,255,255,.82);border:2px solid #EEE5D2;text-align:left;color:#2B3A67}
+.ebar{position:relative;z-index:2;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:calc(100% - 14px);margin:18px 7px 0;padding:12px 24px;min-height:76px;border-radius:38px;background:rgba(255,255,255,.82);border:2px solid #EEE5D2;text-align:left;color:#2B3A67}
 .ebar b{display:block;font-size:18px;font-weight:800}
 .ebar small{display:block;font-size:14px;font-weight:600;opacity:.75;margin-top:2px}
 .ebg{display:block}.ebc{margin-right:16px}
@@ -652,13 +658,13 @@ input{-webkit-user-select:text;user-select:text}
 /* ===== Calm Mode: nothing bounces, flashes or spins ===== */
 body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!important;animation:none!important}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{-webkit-animation:none!important;animation:none!important}}
-@media (orientation:portrait){.cat{width:calc(33.3% - 14px);height:318px}.cat .cd{font-size:16px}.peek{left:66.6%;width:33.3%}.ebd{margin:0 14px}.ebc small{display:none}}
-@media (max-width:640px){.brand .rb{width:64px;height:38px;margin-right:8px}.bn{font-size:26px}.bs{font-size:12px}.setbtn{height:44px;padding:0 12px;font-size:15px;top:16px;right:12px}.setbtn span{display:none}
- #home .hscroll{top:76px}.peek{left:50%;width:50%;height:150px}.cats{padding-top:70px}.cat{width:calc(50% - 12px);min-width:0;height:232px;margin:6px;border-radius:24px}.cat .cil{width:92px;height:76px;margin:0 auto 2px}.cat b{font-size:24px}.cat .cd{font-size:13px;margin-top:3px}.cat .cgo{display:none}
+@media (orientation:portrait){.cat{width:calc(33.3% - 14px);height:318px}.cat .cd{font-size:16px}.ebd{margin:0 14px}.ebc small{display:none}}
+@media (max-width:640px){.brand .rb{width:52px;height:52px;border-radius:26px;margin-right:8px}.bn{font-size:26px}.bs{font-size:12px}.setbtn{height:44px;padding:0 12px;font-size:15px;top:16px;right:12px}.setbtn span{display:none}
+ #home .hscroll{top:76px}.cats{padding-top:2px}.rbar{height:92px;margin-top:24px;padding:0 14px 0 112px;border-radius:24px}.rart{left:8px;width:100px;height:112px}.rtx b{font-size:21px}.rtx small{font-size:14px;margin-top:2px}.rgo{display:none}.gnames input{width:calc(50% - 10px)}.cat{width:calc(50% - 12px);min-width:0;height:232px;margin:6px;border-radius:24px}.cat .cil{width:92px;height:76px;margin:0 auto 2px}.cat b{font-size:24px}.cat .cd{font-size:13px;margin-top:3px}.cat .cgo{display:none}
  .ebar{-webkit-flex-wrap:wrap;flex-wrap:wrap;padding:10px 16px;border-radius:26px}.ebd{display:none}.ebg{width:100%;margin-bottom:8px}.ebc{width:auto;-webkit-flex:1;flex:1;margin-bottom:0}.eba{margin-left:14px}
  .wbn{font-size:44px}.wbs{font-size:18px}.wrb{width:130px;height:76px}.wrory{width:170px;height:190px}.startbtn{height:70px;font-size:28px;padding:0 46px}
  .ctitle{font-size:26px;left:84px}.cti{width:50px;height:42px;margin-right:8px}.atile{width:142px;height:150px;margin:7px;border-radius:24px}.atile .aic{font-size:62px}.atile .anm{font-size:17px}.gseg{max-width:100%}}
-@media (max-height:500px){.cat{height:236px}.cat .cil{width:84px;height:70px}.cat b{font-size:24px}.cat .cd{font-size:13px}.cat .cgo{display:none}.cats{padding-top:76px}.peek{height:150px}.wrory{height:120px;width:120px}.wbn{font-size:44px}.wrb{height:60px;width:104px}}
+@media (max-height:500px){.cat{height:236px}.cat .cil{width:84px;height:70px}.cat b{font-size:24px}.cat .cd{font-size:13px}.cat .cgo{display:none}.cats{padding-top:2px}.rbar{height:84px}.rart{height:104px;width:100px}.wrory{height:120px;width:120px}.wbn{font-size:44px}.wrb{height:60px;width:104px}}
 </style>
 </head>
 <body>
@@ -666,22 +672,21 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
 <!-- WELCOME -->
 <div id="welcome" class="screen on">
   <div class="wlc">
-    <div class="wrb"><svg viewBox="0 0 120 70"><path d="M8 66 A52 52 0 0 1 112 66" fill="none" stroke="#E8836B" stroke-width="13" stroke-linecap="round"/><path d="M24 66 A36 36 0 0 1 96 66" fill="none" stroke="#F2C464" stroke-width="12" stroke-linecap="round"/><path d="M40 66 A20 20 0 0 1 80 66" fill="none" stroke="#7FBFB0" stroke-width="11" stroke-linecap="round"/></svg></div>
+    <div class="wrory" id="wRory"></div>
     <div class="wbn">Early Learnings</div>
     <div class="wbs" data-t="Play • Discover • Grow">Play &bull; Discover &bull; Grow</div>
-    <div class="wrory" id="wRory"></div>
     <button class="startbtn" id="startBtn"><span data-t="Start">Start</span> &#x25B6;&#xFE0E;</button>
   </div>
 </div>
 
 <!-- HOME -->
 <div id="home" class="screen">
-  <div class="brand"><span class="rb"><svg viewBox="0 0 120 70"><path d="M8 66 A52 52 0 0 1 112 66" fill="none" stroke="#E8836B" stroke-width="13" stroke-linecap="round"/><path d="M24 66 A36 36 0 0 1 96 66" fill="none" stroke="#F2C464" stroke-width="12" stroke-linecap="round"/><path d="M40 66 A20 20 0 0 1 80 66" fill="none" stroke="#7FBFB0" stroke-width="11" stroke-linecap="round"/></svg></span><span class="bt"><span class="bn">Early Learnings</span><span class="bs" data-t="Play • Discover • Grow">Play &bull; Discover &bull; Grow</span></span></div>
+  <div class="brand"><span class="rb" id="logoR"></span><span class="bt"><span class="bn">Early Learnings</span><span class="bs" data-t="Play • Discover • Grow">Play &bull; Discover &bull; Grow</span></span></div>
   <button class="setbtn" id="setBtn">&#x2699;&#xFE0E; <span data-t="Settings">Settings</span></button>
   <div class="hscroll scrolly" id="hscroll">
     <div class="hwrap">
-      <div class="peek" id="hbArt"></div>
       <div class="cats" id="cats"></div>
+      <button class="rbar" id="roryBar"><span class="rart" id="hbArt"></span><span class="rtx"><b data-t="Rory’s Hero Academy">Rory&rsquo;s Hero Academy</b><small data-t="Help Rory on his missions!">Help Rory on his missions!</small></span><span class="rgo">&#x279C;</span></button>
       <button class="ebar" id="eBar"></button>
     </div>
   </div>
@@ -2077,7 +2082,11 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
     'All done for now!': ["C’est fini pour l’instant !", "¡Hemos terminado por ahora!", "Per ora abbiamo finito!", "Por agora já está!"],
     'Time for something else.': ["C’est l’heure de faire autre chose.", "Es hora de hacer otra cosa.", "È ora di fare qualcos’altro.", "Está na hora de fazer outra coisa."],
     'Educator': ["Éducatrice / éducateur", "Educador", "Educatore", "Educador"],
-    'Next friend’s turn!': ["Au tour du prochain ami !", "¡Le toca al siguiente amigo!", "Tocca al prossimo amico!", "É a vez do próximo amigo!"]
+    'Next friend’s turn!': ["Au tour du prochain ami !", "¡Le toca al siguiente amigo!", "Tocca al prossimo amico!", "É a vez do próximo amigo!"],
+    '{who}’s turn!': ["Au tour de {who} !", "¡Le toca a {who}!", "Tocca a {who}!", "É a vez de {who}!"],
+    'Children’s first names (optional)': ["Prénoms des enfants (facultatif)", "Nombres de los niños (opcional)", "Nomi dei bambini (facoltativo)", "Nomes das crianças (opcional)"],
+    'Child {n}': ["Enfant {n}", "Niño {n}", "Bambino {n}", "Criança {n}"],
+    'Help Rory on his missions!': ["Aide Rory dans ses missions !", "¡Ayuda a Rory en sus misiones!", "Aiuta Rory nelle sue missioni!", "Ajuda o Rory nas suas missões!"]
   };
   for (var tr5k in TR5) if (TR5.hasOwnProperty(tr5k) && !TR.hasOwnProperty(tr5k)) TR[tr5k] = TR5[tr5k];
   // reading, letters and rhymes for each language (every emoji here exists on iOS 12)
@@ -4007,10 +4016,16 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
     h += seg('🗣️ ' + T('Voice'), T('Spoken instructions and praise'), onoff, talkOn ? 1 : 0, 'voice');
     h += seg('⏱️ ' + T('Session length'), T('A gentle “all done” screen appears when the time is up.'), [['0', T('Off')], ['10', '10 min'], ['15', '15 min'], ['20', '20 min'], ['30', '30 min']], P.session || 0, 'sess');
     h += seg('👫 ' + T('Group turns'), T('Shows whose turn it is after each question.'), [['0', T('Off')], ['2', '2'], ['3', '3'], ['4', '4']], P.turns || 0, 'turns');
+    if (P.turns > 1) {
+      h += '<div class="gnames"><span>' + T('Children’s first names (optional)') + '</span>';
+      for (i = 0; i < P.turns; i++) h += '<input class="gtn" data-i="' + i + '" maxlength="12" autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false" placeholder="' + T('Child {n}', { n: i + 1 }) + '" value="' + escH(tname(i)) + '">';
+      h += '</div>';
+    }
     h += '<div class="gsec">' + T('Activities') + '</div><div class="gnote" style="margin-top:0">' + T('Tap an activity to hide it from children or show it again.') + '</div>';
-    for (i = 0; i < CATS5.length; i++) {
-      var ca = allActs(CATS5[i][0]);
-      h += '<div class="gcat">' + T(CATS5[i][1]) + '</div><div class="glangs">';
+    var CL = CATS5.concat([['rory', 'Rory']]);
+    for (i = 0; i < CL.length; i++) {
+      var ca = allActs(CL[i][0]);
+      h += '<div class="gcat">' + (CL[i][0] === 'rory' ? 'Rory' : T(CL[i][1])) + '</div><div class="glangs">';
       for (var q = 0; q < ca.length; q++) h += '<button class="glb gact' + (actOn(ca[q].id) ? ' sel' : '') + '" data-act="' + ca[q].id + '">' + ca[q].ic + ' ' + T(ca[q].name) + '</button>';
       h += '</div>';
     }
@@ -4048,12 +4063,15 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
     for (i = 0; i < docs.length; i++) h += '<button class="gdoc" data-doc="' + docs[i][0] + '">' + docs[i][1] + '</button>';
     h += '<button class="gdoc" id="gPin">🔒 ' + T('Change PIN') + '</button><button class="gdoc" id="gWel">' + T('Welcome screen') + '</button></div>';
     h += '<div class="gnote">' + T('Everything is stored on this device only. No accounts, no tracking, no advertising.') + '</div>';
-    h += '<div class="gnote" style="text-align:center">Early Learnings · v10</div>';
+    h += '<div class="gnote" style="text-align:center">Early Learnings · v11</div>';
     h += '<div style="text-align:center;margin-top:14px"><button class="bigbtn no" id="gReset">' + T('Reset') + '</button><button class="bigbtn blue" id="gDone">' + T('Done') + '</button></div>';
     body.innerHTML = h;
     ov.classList.add('on');
     ov.scrollTop = keep;
     $('gName').addEventListener('input', function () { P.name = this.value.replace(/[^A-Za-zÀ-ÿ' -]/g, '').slice(0, 12); saveP(); }, false);
+    each(qa('.gtn', body), function (inp) {
+      inp.addEventListener('input', function () { P.tnames = P.tnames || []; P.tnames[+inp.getAttribute('data-i')] = inp.value.replace(/[^A-Za-zÀ-ÿ' -]/g, '').slice(0, 12); saveP(); turnPaint(); }, false);
+    });
     each(qa('.gsb', body), function (b) {
       tap(b, function () {
         var k = b.getAttribute('data-k'), v = b.getAttribute('data-v');
@@ -5780,7 +5798,7 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
   // [screen, category, name, icon]
   var ACTS = [['cards', 'discover', 'Flashcards', '🗂️'], ['memory', 'think', 'Memory', '🃏'], ['jigsaw', 'think', 'Jigsaw', '🧩'], ['maze', 'think', 'Maze', '🐰'], ['feed', 'think', 'Feed & Sort', '🥕'],
     ['draw', 'create', 'Draw', '🎨'], ['color', 'create', 'Colouring', '🐠'], ['trace', 'create', 'Write', '✏️'], ['dots', 'create', 'Dot to Dot', '🌟'], ['faces', 'create', 'Silly Faces', '🤪'], ['music', 'create', 'Music', '🎹'],
-    ['ispy', 'explore', 'I Spy', '🔍'], ['sounds', 'explore', 'Animals', '🐮'], ['hq', 'explore', 'Hero Academy', '🦖'],
+    ['ispy', 'explore', 'I Spy', '🔍'], ['sounds', 'explore', 'Animals', '🐮'], ['hq', 'rory', 'Hero Academy', '🦖'],
     ['bubbles', 'relax', 'Bubbles', '🧼'], ['stars', 'relax', 'Starry Sky', '✨']];
   // activities an educator might leave out for an age group
   var SUGGEST_OFF = { '2': ['maze', 'jigsaw'], '3': [], '4': [], '5': ['sounds'] };
@@ -5809,6 +5827,8 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
     for (i = 0; i < AGES.length; i++) h += '<i' + (AGES[i][0] === age() ? ' class="sel"' : '') + '>' + AGES[i][1] + '</i>';
     h += '</span></span><em class="ebd"></em><span class="ebg ebc"><b>🍃 ' + T('Calm Mode') + '</b><small>' + T('No music or sound effects') + '</small></span><span class="sw' + (P.calm ? ' on' : '') + '"></span><em class="ebd"></em><span class="eba">ⓘ ' + T('About') + '</span>';
     $('eBar').innerHTML = h;
+    $('roryBar').style.display = actOn('hq') ? '' : 'none';
+    logoPaint();
   }
   enter.cat = function () {
     var a = catActs(curCat), h = '', i, c;
@@ -5825,7 +5845,7 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
     else if (a.go === 'color') { show('draw'); openPages(); }
     else show(a.go);
   }
-  function goAct(id) { var all = [], i; for (i = 0; i < CATS5.length; i++) all = all.concat(allActs(CATS5[i][0])); for (i = 0; i < all.length; i++) if (all[i].id === id) { for (var j = 0; j < ACTS.length; j++) if (ACTS[j][0] === id) curCat = ACTS[j][1]; if (all[i].sk) curCat = SKCAT[all[i].sk]; openAct(all[i]); return true; } return false; }
+  function goAct(id) { var all = [], i; for (i = 0; i < CATS5.length; i++) all = all.concat(allActs(CATS5[i][0])); all = all.concat(allActs('rory')); for (i = 0; i < all.length; i++) if (all[i].id === id) { for (var j = 0; j < ACTS.length; j++) if (ACTS[j][0] === id) curCat = ACTS[j][1]; if (all[i].sk) curCat = SKCAT[all[i].sk]; openAct(all[i]); return true; } return false; }
 
   /* ---- settings that apply everywhere ---- */
   function applySettings() {
@@ -5864,12 +5884,14 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
   function turnPaint() {
     var b = $('turnBadge'), on = P.turns > 1 && (current === 'quiz' || current === 'mission');
     b.style.display = on ? 'block' : 'none';
-    if (on) { b.style.background = TCOL[turn % 4]; b.innerHTML = String(turn + 1); }
+    if (on) { var nm = tname(turn); b.style.background = TCOL[turn % 4]; b.className = nm ? 'named' : ''; b.innerHTML = nm ? escH(nm) : String(turn + 1); }
   }
+  function tname(i) { var n = P.tnames && P.tnames[i]; return n ? String(n).replace(/^\s+|\s+$/g, '') : ''; }
+  function logoPaint() { var l = $('logoR'); l.innerHTML = heroSVG(); var s = l.querySelector('svg'); if (s) { s.setAttribute('viewBox', '46 14 108 108'); s.setAttribute('preserveAspectRatio', 'xMidYMid slice'); s.style.width = '100%'; s.style.height = '100%'; s.style.display = 'block'; } }
   function turnNext() {
     if (!(P.turns > 1)) return;
     turn = (turn + 1) % P.turns; turnPaint();
-    toast('<span class="tdot" style="background:' + TCOL[turn % 4] + '">' + (turn + 1) + '</span> ' + T('Next friend’s turn!'), 1900);
+    toast('<span class="tdot" style="background:' + TCOL[turn % 4] + '">' + (turn + 1) + '</span> ' + (tname(turn) ? T('{who}’s turn!', { who: escH(tname(turn)) }) : T('Next friend’s turn!')), 1900);
   }
 
   /* ---- educator PIN ---- */
@@ -5920,6 +5942,7 @@ body.calm *,body.calm *:before,body.calm *:after{-webkit-animation:none!importan
     tap($('pinCancel'), pinClose);
     tap($('setBtn'), function () { gate(openGrown); });
     tap($('eBar'), function () { gate(openGrown); });
+    tap($('roryBar'), function () { sfx.blip(); show('hq'); });
   })();
 
   /* ---- session length ---- */
