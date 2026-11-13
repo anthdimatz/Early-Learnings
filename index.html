@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FBF3E7">
+<link rel="apple-touch-icon" href="play-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Early Learnings</title>
+<link rel="stylesheet" href="docs.css">
+<style>
+.wrap{text-align:center;padding-top:36px}
+.rb{width:170px;height:100px;margin:0 auto}
+h1{font-size:54px;margin:4px 0 0}
+.sub{font-size:22px;margin-bottom:22px}
+.open{display:inline-block;background:#2B3A67;color:#fff;text-decoration:none;font-size:28px;font-weight:800;padding:20px 54px;border-radius:44px;box-shadow:0 6px 0 #1B2647;margin:6px 0 26px}
+.how{text-align:left}
+.langs button{font:inherit;font-size:15px;font-weight:700;border:2px solid #E6DDC9;background:#fff;color:#2B3A67;border-radius:18px;padding:7px 14px;margin:3px}
+.langs button.sel{background:#3E7B5E;border-color:#3E7B5E;color:#fff}
+.foot{font-size:15px;margin-top:22px}.foot a{color:#3D4F7D;margin:0 8px}
+</style>
+</head>
+<body><div class="wrap">
+<div class="langs" id="langs"></div>
+<div class="rb"><svg viewBox="0 0 120 70" width="100%" height="100%"><path d="M8 66 A52 52 0 0 1 112 66" fill="none" stroke="#E8836B" stroke-width="13" stroke-linecap="round"/><path d="M24 66 A36 36 0 0 1 96 66" fill="none" stroke="#F2C464" stroke-width="12" stroke-linecap="round"/><path d="M40 66 A20 20 0 0 1 80 66" fill="none" stroke="#7FBFB0" stroke-width="11" stroke-linecap="round"/></svg></div>
+<h1>Early Learnings</h1>
+<p class="sub" data-k="sub">Play &bull; Discover &bull; Grow</p>
+<a class="open" href="play.html" data-k="open">Open the app</a>
+<div class="card how">
+  <h2 data-k="h" style="margin-top:4px">Put it on the Home Screen</h2>
+  <ol>
+    <li data-k="s1">Open the app with the button above.</li>
+    <li data-k="s2">Tap the Share button (the square with the arrow) at the top of Safari.</li>
+    <li data-k="s3">Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
+  </ol>
+  <p data-k="off">After the first visit, the app works without Wi-Fi. Language, age group and Calm Mode are in Settings inside the app.</p>
+</div>
+<p class="foot"><a href="guide.html">Educator guide</a><a href="sheets.html">Printable sheets</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></p>
+</div>
+<script>
+(function () {
+  var S = {
+    en: ['English', 'Play &bull; Discover &bull; Grow', 'Open the app', 'Put it on the Home Screen', 'Open the app with the button above.', 'Tap the Share button (the square with the arrow) at the top of Safari.', 'Tap <b>Add to Home Screen</b>, then <b>Add</b>.', 'After the first visit, the app works without Wi-Fi. Language, age group and Calm Mode are in Settings inside the app.'],
+    fr: ['Français', 'Jouer &bull; Découvrir &bull; Grandir', 'Ouvrir l’app', 'L’ajouter à l’écran d’accueil', 'Ouvrez l’app avec le bouton ci-dessus.', 'Touchez le bouton Partager (le carré avec la flèche) en haut de Safari.', 'Touchez <b>Sur l’écran d’accueil</b>, puis <b>Ajouter</b>.', 'Après la première visite, l’app fonctionne sans Wi-Fi. La langue, le groupe d’âge et le mode calme se trouvent dans les réglages de l’app.'],
+    es: ['Español', 'Jugar &bull; Descubrir &bull; Crecer', 'Abrir la app', 'Añádela a la pantalla de inicio', 'Abre la app con el botón de arriba.', 'Toca el botón Compartir (el cuadrado con la flecha) arriba en Safari.', 'Toca <b>Añadir a pantalla de inicio</b> y luego <b>Añadir</b>.', 'Después de la primera visita, la app funciona sin Wi-Fi. El idioma, el grupo de edad y el modo tranquilo están en los ajustes de la app.'],
+    it: ['Italiano', 'Gioca &bull; Scopri &bull; Cresci', 'Apri l’app', 'Mettila nella schermata Home', 'Apri l’app con il pulsante qui sopra.', 'Tocca il pulsante Condividi (il quadrato con la freccia) in alto in Safari.', 'Tocca <b>Aggiungi a Home</b>, poi <b>Aggiungi</b>.', 'Dopo la prima visita, l’app funziona senza Wi-Fi. Lingua, fascia d’età e modalità calma sono nelle impostazioni dell’app.'],
+    pt: ['Português', 'Brincar &bull; Descobrir &bull; Crescer', 'Abrir a app', 'Pô-la no ecrã principal', 'Abra a app com o botão acima.', 'Toque no botão Partilhar (o quadrado com a seta) no topo do Safari.', 'Toque em <b>Adicionar ao ecrã principal</b> e depois em <b>Adicionar</b>.', 'Depois da primeira visita, a app funciona sem Wi-Fi. O idioma, a faixa etária e o modo calmo estão nas definições da app.']
+  };
+  var K = ['sub', 'open', 'h', 's1', 's2', 's3', 'off'], order = ['en', 'fr', 'es', 'it', 'pt'];
+  function set(l) {
+    if (!S[l]) l = 'en';
+    var s = S[l], els = document.querySelectorAll('[data-k]'), i;
+    for (i = 0; i < els.length; i++) els[i].innerHTML = s[K.indexOf(els[i].getAttribute('data-k')) + 1];
+    var bs = document.querySelectorAll('#langs button');
+    for (i = 0; i < bs.length; i++) bs[i].className = bs[i].getAttribute('data-l') === l ? 'sel' : '';
+    try { localStorage.setItem('idx.lang', l); document.documentElement.lang = l; } catch (e) {}
+  }
+  var h = '';
+  for (var i = 0; i < order.length; i++) h += '<button data-l="' + order[i] + '">' + S[order[i]][0] + '</button>';
+  var box = document.getElementById('langs'); box.innerHTML = h;
+  box.onclick = function (e) { var l = e.target.getAttribute && e.target.getAttribute('data-l'); if (l) set(l); };
+  var saved = null; try { saved = localStorage.getItem('idx.lang') || localStorage.getItem('play.lang'); } catch (e) {}
+  set(saved || (navigator.language || 'en').slice(0, 2));
+})();
+</script>
+</body>
+</html>

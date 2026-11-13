@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# Early Learnings v10
+
+CACHE:
+play.html
+play-icon.png
+guide.html
+sheets.html
+privacy.html
+terms.html
+docs.css
+
+NETWORK:
+*
